@@ -5,7 +5,7 @@ This project is a web application that generates a word cloud from the script of
 ## Video Demo
 
 ```
-Youtube: https://youtu.be/nia__HybUJI
+https://youtu.be/nia__HybUJI
 ```
 
 ## Usage
