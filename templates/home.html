@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div>
+    <p class="lead">Generate a word cloud from the script of your favorite movie!<span> 🎬 </span></p>
+    <form method="POST" action="/">
+        <div class="search-box">
+            <div class="row">
+                <input type="text" id="movie_name" name="movie_name" placeholder="Search Movie"required autocomplete="off">
+                <button class="btn btn-dark" type="submit">Generate</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    {% if image_data %}
+    <div>
+        <img style="padding: 20px 0px 0px 0px;" src="data:image/png;base64,{{ image_data }}">
+    </div>
+    {% endif %}
+    <div>
+        {{ error }}
+    </div>
+</div>
+<script>
+    $( function() {
+      var availableTags = [
+          {% for movie_name in movie_names %}
+              "{{movie_name}}",
+          {% endfor %}
+      ];
+      $( "#movie_name" ).autocomplete({
+        source: availableTags
+      });
+    } );
+    </script>
+{% endblock %}
