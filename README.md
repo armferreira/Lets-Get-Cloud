@@ -8,7 +8,7 @@ Clone the repository and navigate to the project directory in your terminal:
 
 ```
 git clone https://github.com/armferreira/lets-get-cloud
-cd word-cloud-generator
+cd lets-get-cloud
 ```
 
 Install the required Python packages using pip:
@@ -38,7 +38,7 @@ To learn more about the project, click on the "About" link in the navigation bar
 
 ## Dependencies
 
-As stated above, you can check all requirements on the requirements.txt file and install them all simply running the following code:
+As stated above, you can check all requirements on the requirements.txt file and install them by simply running the following code:
 
 ```
 pip install -r requirements.txt
