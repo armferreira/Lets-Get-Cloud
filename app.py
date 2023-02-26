@@ -51,11 +51,3 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-
-@app.route('/autocomplete')
-def autocomplete():
-    query = request.args.get('q')
-    movies = db.execute("SELECT name FROM movies WHERE name LIKE :query LIMIT 5", query=f"%{query}%")
-    movies = [movie['name'] for movie in movies]
-    return jsonify(movies)

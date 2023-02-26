@@ -1,6 +1,12 @@
 # Let's get cloud
 
-This project is a web application that generates a word cloud from the script of a user's favorite movie. Users can search for a movie by typing its name in a search box, and the application will retrieve the movie script from a database and generate a word cloud visualization. The word cloud displays the most frequent words from the movie script, with the size of each word representing its frequency. Users can customize the word cloud by changing its size, colors, and font. The application also includes autocomplete functionality for the search box, allowing users to quickly find the movie they're looking for. This project is built using Flask, Python, JavaScript, and various libraries for data visualization and web development.
+This project is a web application that generates a word cloud from the script of a user's favorite movie. Users can search for a movie by typing its name in a search box, and the application will retrieve the movie script from a database and generate a word cloud visualization. The word cloud displays the most frequent words from the movie script, with the size of each word representing its frequency. The application also includes autocomplete functionality for the search box, allowing users to quickly find the movie they're looking for. This project is built using Flask, Python, JavaScript, and various libraries for data visualization and web development.
+
+## Video Demo
+
+```
+Youtube: https://youtu.be/nia__HybUJI
+```
 
 ## Usage
 
