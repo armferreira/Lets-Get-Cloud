@@ -27,15 +27,27 @@
     </div>
 </div>
 <script>
-    $( function() {
+    $(function() {
       var availableTags = [
-          {% for movie_name in movie_names %}
-              "{{movie_name}}",
-          {% endfor %}
+        {% for movie_name in movie_names %}
+            "{{movie_name}}",
+        {% endfor %}
       ];
-      $( "#movie_name" ).autocomplete({
-        source: availableTags
+      $("#movie_name").autocomplete({
+        source: function(request, response) {
+          // Filter the available tags based on the user input
+          var filteredTags = $.ui.autocomplete.filter(
+            availableTags,
+            request.term
+          );
+          // Limit the number of results
+          var maxResults = 10;
+          var slicedTags = filteredTags.slice(0, maxResults);
+          response(slicedTags);
+        },
+        minLength: 2 // Require at least 2 characters to start searching
       });
-    } );
-    </script>
+    });
+</script>
+  
 {% endblock %}
